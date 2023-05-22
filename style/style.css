@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    min-width: 610px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    background-color: black;
+    overflow-y: hidden;
+  }
+  
+  div#container {
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+    position: absolute;
+    top: 210px;
+    width: 35em;
+    height: 25em;
+    overflow-y: scroll;
+  }
+  
+  @media screen and (max-width: 600px) {
+    div#container {
+      overflow-y:hidden;
+    }
+  }
+  
+  div#container > * {
+    margin: 10px;
+  }
+  
+  div#container::-webkit-scrollbar {
+    width: 20px;
+    height: 10px;
+  }
+  
+  div#container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 30px;
+  }
+  
+  div#container::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 30px;
+  }
+  
+  #head input {
+    width: 30em;
+    height: 2.5em;
+    border-radius: 2.5em;
+    padding: 15px;
+    position: fixe;
+  }
+  
+  #head button#new-task,
+  button#search-task {
+    margin-left: 0.3em;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+  
+  #head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  li.task {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid white;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 10px;
+    height: max-content;
+    max-width: 35.5em;
+    margin-top: 10px;
+  }
+  
+  li.task h1 {
+    padding: 5px 0px 0px 5px;
+    grid-column: 1/3;
+    font-size: 1.6em;
+  }
+  
+  li.task p {
+    padding: 10px 0px 20px 5px;
+    grid-column: 1/3;
+  }
+  
+  li.task h2 {
+    padding: 5px 5px;
+    grid-column: 1/2;
+  }
+  
+  div.options {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+  }
+  
+  div.options button {
+    margin-right: 10px;
+    background-color: yellow;
+    border: none;
+  }
+  
+  div#Confirmtask {
+    padding: 20px;
+    color: black;
+    border: 2px solid black;
+    background-color: yellow;
+    width: 20em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 20em;
+    position: absolute;
+    left: 5em;
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: yellow;
+    }
+  }
+  
+  
+  #Confirmtask input#nameTask {
+    width: 285px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #Confirmtask #limiteDate {
+    width: 285px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+    #Confirmtask label {
+      margin-right: 140px;
+    }
+    
+    #descriptionTask {
+      width: 285px;
+      height: 105px;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      
+    }
+    
+    #buttons-add {
+      margin-top: 10px;
+      display: flex;
+      width: 18em;
+      justify-content: right;
+    }
+    
+    #buttons-add > button {
+      margin-left: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: yellow;
+      width: 2.1em;
+      height: 2.1em;
+      border-radius: 50%;
+    }
